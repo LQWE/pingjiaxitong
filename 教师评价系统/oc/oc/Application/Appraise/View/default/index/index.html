@@ -1,0 +1,34 @@
+<extend name="Base/common"/>
+<block name="body">
+	<div class="col-xs-12">
+      	 教师目录
+	   <table width="100%" border="1">
+		  <tr>
+			<td>Name</td>
+			<td>Point</td>
+			<td>Operate</td>
+		  </tr>
+		  <volist name="teachers" id="vo">
+			  <tr>
+				<td><a href="{:U('showAppraise',array('uid'=>$vo['uid']))}">{$vo.nickname}</a></td>
+				<td>&nbsp;</td>
+				<td>
+				<a href="{:U('selectLesson',array('uid'=>$vo['uid']))}">
+					Select
+				</a>
+				</td>
+			  </tr>
+		  </volist>
+		</table>
+	</div>
+</block>
+
+
+
+
+
+
+
+
+
+

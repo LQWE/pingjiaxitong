@@ -1,0 +1,31 @@
+<extend name="Base/common"/>
+<block name="body">
+	<div class="col-xs-12">
+      	 {$teacher.space_link}:{$point}
+		  <volist name="appraises" id="vo">
+			  <div>
+			  	<php>
+			  	if($vo['anonymous']==1){
+			  	</php>
+			  		学生：匿名<br/>
+			  	<php>}else{</php>
+			  		学生：{$vo['student']['nickname']}<br/>
+			  	<php>}</php>
+			          
+			  	时间：{:date('Y-m-d',$vo['createTime'])}<br/>
+			  	评分：{$vo.point}<br/>
+			  	评语：{$vo.content}
+			  </div>
+		  </volist>
+	</div>
+</block>
+
+
+
+
+
+
+
+
+
+
